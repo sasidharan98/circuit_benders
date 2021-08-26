@@ -1,0 +1,133 @@
+{
+  "Header": {
+    "title": "Circuit Benders",
+    "paragraph": "let there be carnage"
+  },
+  "About": {
+    "paragraph": "With more than a decade in the field of PCB prototype and fabrication, we are committed to meeting the needs of our customers from different industries in terms of quality, delivery, cost-effectiveness and any other demanding requests. As one of the most experienced PCB manufacturers in China, we pride ourselves to be your best business partners as well as good friends in the every aspect of your PCB need",
+    "Why": [
+      "High Skilled team",                                                        
+      "Customized design",
+      "High delivery rate",                                                                                      
+      "Maintenance-free"
+    ],
+    "Why2": [
+    ]
+  },
+  "Services": [
+    {
+      "icon": "fa fa-wordpress",
+      "name": "Lorem ipsum dolor",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    },
+    {
+      "icon": "fa fa-cart-arrow-down",
+      "name": "Consectetur adipiscing",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    },
+    {
+      "icon": "fa fa-cloud-download",
+      "name": "Lorem ipsum dolor",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    },
+    {
+      "icon": "fa fa-language",
+      "name": "Consectetur adipiscing",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    },
+    {
+      "icon": "fa fa-plane",
+      "name": "Lorem ipsum dolor",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    },
+    {
+      "icon": "fa fa-pie-chart",
+      "name": "Consectetur adipiscing",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+    }
+  ],
+  "Testimonials": [
+    {
+      "img": "img/testimonials/01.jpg",
+      "text": "That's rough buddy",
+       "name": "Captain America"
+    },
+    {
+      "img": "img/testimonials/02.jpg",
+      "text": "I am Batman",
+       "name": "Batman"
+    },
+    {
+      "img": "img/testimonials/03.jpg",
+      "text": "I am ironman",
+      "name": "Iron man"
+    },
+    {
+      "img": "img/testimonials/04.jpg",
+      "text": " Jokes on u",
+      "name": "Joker"
+    },
+    {
+      "img": "img/testimonials/05.jpg",
+      "text": "Perfectly Balanced, As everything should be",
+     "name": "Thanos"
+    },
+    {
+      "img": "img/testimonials/06.jpg",
+      "text": "Velaku pidichu vinveli porom",
+      "name": "Green Lantern"
+    }
+  ],
+  "Team": [
+    {
+      "img": "img/team/01.jpg",
+      "name": "Naren kumar",
+      "job": "Director"
+    },
+    {
+      "img": "img/team/02.jpg",
+      "name": "Dr C Shravan",
+      "job": "Chief Operation Officer"
+    },
+    {
+      "img": "img/team/03.jpg",
+      "name": "S G Srinivas",
+      "job": "Chief Executive Officer"
+    },
+    {
+      "img": "img/team/04.jpg",
+      "name": "Koushik",
+      "job": "Project Manager"
+    }
+  ],
+  "Contact": {
+    "address": "Door no.6, Plot No.27, New NGGO Colony, 2nd Cross Street, Adambakkam, Chennai-600088 ",
+    "phone": "+91-9791028585",
+    "email": "circuitbender02@gmail.com",
+    "facebook": "fb.com",
+    "twitter": "twitter.com",
+    "youtube": "youtube.com"
+  },
+  "Features": [
+    {
+      "icon": "fa fa-comments-o",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-bullhorn",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-group",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    },
+    {
+      "icon": "fa fa-magic",
+      "title": "Lorem ipsum",
+      "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+    }
+  ]
+}

@@ -1,0 +1,189 @@
+.signup{
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+    }
+    
+    .brand-intro{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin: auto;
+        margin-top: 10rem;
+        padding-left: 15px;
+    }
+    .brand-gif-responsive {
+        width: 90%;
+        height: auto;
+        margin-right: auto;
+      }
+    p{
+        margin-top: 10px;
+    }
+    h1{
+        width: 100%;
+        white-space: nowrap;
+    }
+    .brand-img{
+        width: auto;
+        height: auto;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        max-width: 200px;
+    }
+    
+    
+      #contact .section-title p {
+        font-size: 16px;
+      }
+      #contact h2 {
+        color: #333;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        padding-bottom: 15px;
+      }
+      #contact .section-title h2::after {
+        position: absolute;
+        content: "";
+        background: rgba(255, 255, 255, 0.034);
+        height: 4px;
+        width: 100%;
+        bottom: 10px;
+        left: 30px;
+    
+      }
+      #contact h3 {
+        color: #333;
+        margin-top: 10px;
+        margin-bottom: 25px;
+    
+        padding-bottom: 20px;
+        font-weight: 400;
+      }
+      #contact form {
+        padding-top: 20px;
+      }
+      #contact .text-danger {
+        color: #cc0033;
+        text-align: left;
+      }
+      #contact .btn-custom {
+        margin: 30px 0;
+        background: transparent;
+        border: 2px solid #333;
+      }
+      #contact .btn-custom:hover {
+        color: #1f386e;
+        background: #333;
+      }
+      label {
+        font-size: 12px;
+        font-weight: 400;
+        font-family: "Open Sans", sans-serif;
+        float: left;
+      }
+      #contact .form-control {
+        display: block;
+        width: 100%;
+        padding: 6px 12px;
+        font-size: 16px;
+        line-height: 1.42857143;
+        color: #444;
+      
+        background-image: none;
+        border: 1px solid #333;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transition: none;
+        -o-transition: none;
+        transition: none;
+      }
+      #contact .form-control:focus {
+        border-color: #999;
+        outline: 0;
+        -webkit-box-shadow: transparent;
+        box-shadow: transparent;
+      }
+      .form-control::-webkit-input-placeholder {
+        color: #777;
+      }
+      .form-control:-moz-placeholder {
+        color: #777;
+      }
+      .form-control::-moz-placeholder {
+        color: #777;
+      }
+      .form-control:-ms-input-placeholder {
+        color: #777;
+      }
+      #contact .contact-item {
+        margin: 20px 0;
+      }
+      #contact .contact-item span {
+        color: rgb(97, 94, 94);
+        margin-bottom: 10px;
+        display: block;
+      }
+      #contact .contact-item i.fa {
+        margin-right: 10px;
+      }
+      #contact .social {
+        border-top: 1px solid rgba(255, 255, 255, 0.15);
+        padding-top: 50px;
+        margin-top: 50px;
+        text-align: center;
+      }
+      #contact .social ul li {
+        display: inline-block;
+        margin: 0 20px;
+      }
+      #contact .social i.fa {
+        font-size: 22px;
+        width: 48px;
+        height: 48px;
+        padding: 12px 0;
+        border: 2px solid #333;
+        color: #333;
+        border-radius: 50%;
+        transition: all 0.3s;
+      }
+      #contact .social i.fa:hover {
+        color: #608dfd;
+        background: #333;
+      }
+      .contacted{
+          padding-left: 10px;
+          max-width: 400px;
+      }
+      .getintouch{
+        padding-left: 10px;
+        max-width: 400px;
+    }
+      
+    
+      .form-css{
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+      }
+      @media screen and (max-width: 1100px) {
+        .signup{
+            display: flex;
+            flex-direction: column;
+            }
+            .brand-intro{
+                margin-top: 2rem;
+            }
+      }
+    
+      @media screen and (max-width: 1100px) {
+        .form-css{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+      }
