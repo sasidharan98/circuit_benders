@@ -1,38 +1,50 @@
 #team {
-    padding: 100px 0;
-  }
-  #team h4 {
-    margin: 5px 0;
-  }
-  #team .team-img {
-    width: 240px;
-  }
-  #team .thumbnail {
-    background:transparent;
-    border: 0;
-  }
-  #team .thumbnail .caption {
-    padding: 10px 0 0;
-    color: rgb(10, 10, 10);
-  }
+  padding: 100px 0;
+}
+#team h4 {
+  margin: 5px 0;
+}
+#team .team-img {
+  width: 240px;
+}
+#team .thumbnail {
+  background:transparent;
+  border: 0;
+}
+#team .thumbnail .caption {
+  padding: 10px 0 0;
+  color: rgb(10, 10, 10);
+}
 
-  .responsive{
+
+  .text-centered{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+  }
+  .team > p {
+      margin-bottom: 10px;
+  }
+  .responsive1{
     display: flex;
     flex-direction: row;
-    margin: 0px;
-    padding: 0px;
-    }
+    justify-content: center;
+  }
 
-    .text-centered{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+
+  @media screen and (max-width: 1200px) {
+    .responsive1{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
-    .team > p {
-        margin-bottom: 10px;
-    }
+  }
 
     img {
         filter: drop-shadow(8px 8px 10px gray);
+      }
+      .img-responsive {
+        width: 100%;
+        height: auto;
       }

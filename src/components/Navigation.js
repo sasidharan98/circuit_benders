@@ -20,15 +20,16 @@ class BootstrapNavbar extends React.Component{
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav"  className="justify-content-end">
                                     <Nav className="mr-auto">
-                                    <Nav.Link href="/signup">Home</Nav.Link>
-                                    <Nav.Link href="/update-profile">About Us</Nav.Link>
-                                    <Nav.Link href="/contact-us">Custom PCB</Nav.Link>
+                                    <Nav.Link href="/login">Home</Nav.Link>
+                                    <Nav.Link href="/">About Us</Nav.Link>
+                                    <Nav.Link href="/update-profile">Profile</Nav.Link>
                                     <NavDropdown title="Product" id="basic-nav-dropdown">
-                                        <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.1">Raspberry pi</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.2">Arduino</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.3">IOT Boards</NavDropdown.Item>
                                         <NavDropdown.Divider />
-                                        <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.4">ESP 8266</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.4">Nodemcu</NavDropdown.Item>
                                     </NavDropdown>
                                     </Nav>
                                     <Form inline>

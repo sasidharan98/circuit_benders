@@ -1,19 +1,16 @@
 import { Team } from "../components/Team";
 import './About.css'
 import React from "react";
+import { Contact } from "../components/contact";
 export const About = (props) => {
   return (
  
     <div id="about">
       <div className="container">
-      {console.log(props)}
         <div className="row">
+
           <div className="col-xs-12 col-md-6">
-            {" "}
-            <img src="img/about.jpg" className="img-responsive" alt="" />{" "}
-          </div>
-          <div className="col-xs-12 col-md-6">
-            <div className="about-text">
+            <div className="about-text ">
               <h2>About Us</h2>
               <p>{props.About ? props.About.paragraph : "loading..."}</p>
               <h3>Why Choose Us?</h3>
@@ -42,6 +39,7 @@ export const About = (props) => {
         </div>
       </div>
       <Team data={props.Team}/>
+      <Contact data={props.Contact} />
     </div>
   );
 };
