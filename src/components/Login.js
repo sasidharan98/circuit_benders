@@ -56,7 +56,7 @@ export default function Login() {
       <div className="w-100 text-center mt-2">
         Need an account? <Link to="/signup">Sign Up</Link>
       </div>
-              <h4>Official Partner of AMD & NVIDIA</h4>
+              <h4 className="text-center">Official Partner of AMD & NVIDIA</h4>
               <img src= '../img/amd.png' alt="3d model"   className="brand-img"/>
               <img src= '../img/nvidia.png' alt="3d model"  className="brand-img"/>
               </div>

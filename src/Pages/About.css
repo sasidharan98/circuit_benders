@@ -5,7 +5,7 @@
   margin: 5px 0;
 }
 #team .team-img {
-  width: 240px;
+  max-width: 240px;
 }
 #team .thumbnail {
   background:transparent;
@@ -16,12 +16,17 @@
   color: rgb(10, 10, 10);
 }
 
+#team h2{
+  word-wrap: break-word;
+}
+
 
   .text-centered{
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
+      flex-wrap: wrap;
   }
   .team > p {
       margin-bottom: 10px;
@@ -32,6 +37,9 @@
     justify-content: center;
   }
 
+ ul {
+    list-style-type: none;
+  }
 
   @media screen and (max-width: 1200px) {
     .responsive1{
@@ -39,6 +47,10 @@
       justify-content: center;
       align-items: center;
     }
+    #team .team-img {
+      max-width: 240px;
+    }
+  
   }
 
     img {
@@ -48,3 +60,4 @@
         width: 100%;
         height: auto;
       }
+    

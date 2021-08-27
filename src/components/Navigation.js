@@ -13,9 +13,9 @@ class BootstrapNavbar extends React.Component{
     render(){
         return(
             <div>
-                <div className="row ">
+                <div className="row">
                     <div className="col" >
-                            <Navbar className="p-3" bg="dark" variant="dark" expand="lg" sticky="top">
+                            <Navbar  bg="dark" variant="dark" expand="lg" sticky="top">
                                 <Navbar.Brand href="/">Circuit Benders</Navbar.Brand>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav"  className="justify-content-end">
