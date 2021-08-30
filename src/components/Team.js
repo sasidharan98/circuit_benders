@@ -1,7 +1,6 @@
 import React from "react"
 import "./Login.css"
 import "../Pages/About.css"
-import { Contact } from "./contact"
 export const Team = (props) => {
   return (
     <div>

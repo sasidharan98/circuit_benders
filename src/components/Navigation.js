@@ -1,11 +1,6 @@
 import React from 'react'
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    NavLink,
-  } from "react-router-dom";
-  import { Navbar,Nav,NavDropdown,Form,FormControl,Button } from 'react-bootstrap'
+import { Navbar,Nav,NavDropdown,Form,FormControl } from 'react-bootstrap'
+import ConvoBot from './ConvoBot';
 
 
 class BootstrapNavbar extends React.Component{
@@ -37,10 +32,11 @@ class BootstrapNavbar extends React.Component{
                                     </Form>
                                 </Navbar.Collapse>
                             </Navbar>
-                            <br />
-
-                       
+                            <br /> 
                     </div>
+                </div>
+                <div style={{ display: 'flex', zIndex: 1, justifyContent: 'center',position: 'fixed', bottom: '30px', right: '30px' }}>
+                <ConvoBot/>
                 </div>
             </div>
         )  

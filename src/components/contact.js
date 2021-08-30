@@ -136,7 +136,7 @@ export const Contact = (props) => {
                 {props.data ? props.data.email : 'loading'}
               </p>
             </div>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7775.558354022977!2d80.209887!3d12.985971!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1f246cb3fc1a16a7!2sCircuit%20Benders!5e0!3m2!1sen!2sus!4v1629718497105!5m2!1sen!2sus"></iframe>
+            <iframe title="google map" aria-hidden="true" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7775.558354022977!2d80.209887!3d12.985971!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1f246cb3fc1a16a7!2sCircuit%20Benders!5e0!3m2!1sen!2sus!4v1629718497105!5m2!1sen!2sus"></iframe>
             </div>
           </div>
           <footer>

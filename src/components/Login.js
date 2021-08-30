@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
-import { Form, Button,Container, Card, Alert, Navbar } from "react-bootstrap"
+import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
-import { Link, useHistory, NavLink } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import './Login.css'
 export default function Login() {
   const emailRef = useRef()
@@ -63,8 +63,7 @@ export default function Login() {
               <div className='brand-gif'>
               <img src= '../img/intro-bg.gif' alt="3d model" className="brand-gif-responsive"/>
               </div>
-             </div>
-             
+             </div>       
     </>
   )
 }
