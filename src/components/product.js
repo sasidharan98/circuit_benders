@@ -44,7 +44,7 @@ const Product = () => {
   const getData=(data)=>
   {
 
-    return fetch(`http://localhost:5000/api/payment`,{
+    return fetch(` http://210b-183-82-178-29.ngrok.io/api/payment`,{
         method:"POST",
         headers:{
             Accept:"application/json",
@@ -58,7 +58,7 @@ const Product = () => {
 
     const makePayment=()=>
     {
-getData({amount:10000,email:'shravan97c@gmail.com'}).then(response=>{
+getData({amount:100,email:'shravan97c@gmail.com'}).then(response=>{
  
     var information={
         action:"https://securegw-stage.paytm.in/order/process",

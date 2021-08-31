@@ -41,7 +41,7 @@ const  getStatus = () => {
     return (
         <div>
             {
-                success && <h1>Payment Succesfully</h1>
+                success && <h1>Paid Succesfully</h1>
             }
             {
                 error && <h1>{error}</h1>
