@@ -19,7 +19,7 @@ class BootstrapNavbar extends React.Component{
                                     <Nav.Link href="/">About Us</Nav.Link>
                                     <Nav.Link href="/update-profile">Profile</Nav.Link>
                                     <NavDropdown title="Product" id="basic-nav-dropdown">
-                                        <NavDropdown.Item href="#action/3.1">Raspberry pi</NavDropdown.Item>
+                                        <NavDropdown.Item href="/product">Raspberry pi</NavDropdown.Item>
                                         <NavDropdown.Item href="#action/3.2">Arduino</NavDropdown.Item>
                                         <NavDropdown.Item href="#action/3.3">IOT Boards</NavDropdown.Item>
                                         <NavDropdown.Divider />
