@@ -10,14 +10,22 @@ const app = firebase.initializeApp({
   // storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
   // messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
   // appId: process.env.REACT_APP_FIREBASE_APP_ID
-  apiKey: "AIzaSyAoIdCUADd39mQK0TuNM2EJhzrfuW7bDwM",
-  authDomain: "circuit-b87b7.firebaseapp.com",
-  databaseURL: "https://circuit-b87b7.firebaseio.com",
-  projectId: "circuit-b87b7",
-  storageBucket: "circuit-b87b7.appspot.com",
-  messagingSenderId: "285429617143",
-  appId: "1:285429617143:web:01ce38b1ca7c1acc821ef2",
-  measurementId: "G-MLKN0MPG4G"
+  // apiKey: "AIzaSyDtfd3Pc83HWaOE5xlY3YXkSqR0tbpXXoQ",
+  // authDomain: "circuitbenders-10fb2.firebaseapp.com",
+  // databaseURL: "https://circuitbenders-10fb2-default-rtdb.firebaseio.com",
+  // projectId: "circuitbenders-10fb2",
+  // storageBucket: "circuitbenders-10fb2.appspot.com",
+  // messagingSenderId: "525540964961",
+  // appId: "1:525540964961:web:e2bf217facb53810024820",
+  // measurementId: "G-Q74N8X2EZG"
+  apiKey: "AIzaSyDtfd3Pc83HWaOE5xlY3YXkSqR0tbpXXoQ",
+  authDomain: "circuitbenders-10fb2.firebaseapp.com",
+  databaseURL: "https://circuitbenders-10fb2-default-rtdb.firebaseio.com",
+  projectId: "circuitbenders-10fb2",
+  storageBucket: "circuitbenders-10fb2.appspot.com",
+  messagingSenderId: "525540964961",
+  appId: "1:525540964961:web:e2bf217facb53810024820",
+  measurementId: "G-Q74N8X2EZG"
 })
 
 export const auth = app.auth()
