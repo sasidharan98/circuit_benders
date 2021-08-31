@@ -16,7 +16,6 @@ import { About } from "../Pages/About";
 import BootstrapNavbar from "./Navigation";
 import PaymentStatus from "./PaymentStatus";
 import { ThemeProvider } from 'styled-components';
-import Product from './product';
 function App() {
   const [landingPageData, setLandingPageData] = useState({});
   useEffect(() => {
@@ -54,9 +53,9 @@ function App() {
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />  
-              <Route path="/product" component={Product} />
+              {/* <Route path="/product" component={Product} /> */}
               <Route path="/forgot-password" component={ForgotPassword} />
-              <Route exact path="/status/:orderId" component={PaymentStatus} />
+              {/* <Route exact path="/status/:orderId" component={PaymentStatus} /> */}
             </Switch>
           </AuthProvider>
         </Router>

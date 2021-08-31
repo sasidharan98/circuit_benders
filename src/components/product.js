@@ -58,7 +58,7 @@ const Product = () => {
 
     const makePayment=()=>
     {
-getData({amount:500,email:'abc@gmail.com'}).then(response=>{
+getData({amount:10000,email:'shravan97c@gmail.com'}).then(response=>{
  
     var information={
         action:"https://securegw-stage.paytm.in/order/process",
