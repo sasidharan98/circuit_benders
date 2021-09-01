@@ -12,6 +12,7 @@ function Navigation() {
     const  {currentUser}  = useAuth()
     const signout = ()=> {
         logout()
+        currentUser = null
     }
     console.log(currentUser)
     const handleChange = (event) => {
