@@ -44,7 +44,7 @@ const Product = () => {
   const getData=(data)=>
   {
 
-    return fetch(` http://210b-183-82-178-29.ngrok.io/api/payment`,{
+    return fetch(`https://f823-183-82-24-29.ngrok.io/api/payment`,{
         method:"POST",
         headers:{
             Accept:"application/json",
@@ -69,8 +69,8 @@ getData({amount:100,email:'shravan97c@gmail.com'}).then(response=>{
 })
     }
     return (
-        <div>
-            <button onClick={makePayment}>PAY USING PAYTM</button>
+        <div style={{display:'flex', justifyContent: 'center', alignItems:'center'}}>
+            <button  onClick={makePayment}>PAY USING PAYTM</button>
         </div>
     )
 }

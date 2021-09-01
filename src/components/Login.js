@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import {  useTranslation } from 'react-i18next'
 import './Login.css'
 export default function Login() {
   const emailRef = useRef()
@@ -10,7 +11,7 @@ export default function Login() {
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
   const history = useHistory()
-
+  const {t} = useTranslation();
   async function handleSubmit(e) {
     e.preventDefault()
 
@@ -28,7 +29,7 @@ export default function Login() {
 
   return (
     <>
-   <marquee><h1>Buy 1 PCB to Get 1 PCB Free</h1></marquee>
+   <marquee><h1>{t('marq')}</h1></marquee>
    <div className='signup'>
       <div className="brand-intro">
       <div className="w-100" style={{ maxWidth: "400px" }}>
@@ -45,18 +46,18 @@ export default function Login() {
               <Form.Control type="password" ref={passwordRef} required />
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
-              Log In
+              {t('login')}
             </Button>
           </Form>
           <div className="w-100 text-center mt-3">
-            <Link to="/forgot-password">Forgot Password?</Link>
+            <Link to="/forgot-password">{t('Forgot Password?')}</Link>
           </div>
           </Card>
       </div>
       <div className="w-100 text-center mt-2">
-        Need an account? <Link to="/signup">Sign Up</Link>
+        {t('need')} <Link to="/signup">{t('Sign Up')}</Link>
       </div>
-              <h4 className="text-center">Official Partner of AMD & NVIDIA</h4>
+              <h4 className="text-center">{t('Partner')}</h4>
               <img src= '../img/amd.png' alt="3d model"   className="brand-img"/>
               <img src= '../img/nvidia.png' alt="3d model"  className="brand-img"/>
               </div>

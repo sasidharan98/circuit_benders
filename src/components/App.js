@@ -16,12 +16,21 @@ import { About } from "../Pages/About";
 import BootstrapNavbar from "./Navigation";
 import PaymentStatus from "./PaymentStatus";
 import Product from "./product";
+import { Trans, translate, useTranslation } from 'react-i18next'
 import { ThemeProvider } from 'styled-components';
+import Translatedpage from './translatedpage';
+import { render } from "@testing-library/react";
 function App() {
+  const {t, i18n} = useTranslation();
   const [landingPageData, setLandingPageData] = useState({});
+  const d = t('JsonData', { returnObjects: true})
   useEffect(() => {
-    setLandingPageData(JsonData);
+    setLandingPageData(d);
   }, []);
+  // t('JsonData', { returnObjects: true})
+  console.log("ok")
+  console.log(landingPageData)
+  console.log("ok finished")
   const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
   const theme = {
     background: '#f5f8fb',
@@ -34,8 +43,10 @@ function App() {
     userBubbleColor: '#fff',
     userFontColor: '#4a4a4a',
   };
+
+  if (landingPageData!== undefined){
   return (
-   
+
       <div>
         <ThemeProvider theme={theme}>
           <Provider
@@ -49,12 +60,13 @@ function App() {
         </Provider>
         <Router>
           <AuthProvider>
-            <Switch>
-              <PrivateRoute exact path="/" component={About} data= {landingPageData} />
+            <Switch>     
+               <PrivateRoute exact path="/" component={About} data= {landingPageData} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />  
               <Route path="/product" component={Product} />
+              <Route path="/translate" component={Translatedpage} />
               <Route path="/forgot-password" component={ForgotPassword} />
               <Route exact path="/status/:orderId" component={PaymentStatus} />
             </Switch>
@@ -64,6 +76,12 @@ function App() {
       </div>
 
   )
+    }
+    else{
+      return (
+        <div></div>
+      )
+    }
 }
 
 export default App

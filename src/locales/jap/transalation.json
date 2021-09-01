@@ -1,0 +1,155 @@
+ {
+  "Home" : "ホーム",
+  "About Us": "私たちについて",
+  "Profile": "プロファイル",
+  "Donate": "  寄付する",
+  "Translate": "  翻訳",
+  "Language":"言語",
+  "English":"English",
+  "Japanese":"日本語",
+  "marq": "PCBをフラット80％割引で購入",
+  "login":"ログイン",
+  "need": "アカウントが必要ですか？",
+  "Sign Up":"サインアップ",
+  "Partner":"AMDとNVIDIAの公式パートナー",
+  "Forgot Password?": "パスワードをお忘れですか？",
+    "JsonData" : {
+      "Introduction": "前書き",
+      "Advantages": "Advantages",
+      
+      "Flexibility to use other packages": "Flexibility to use other packages",
+      "Header": {
+        "title": "サーキットベンダー",
+        "paragraph": "大虐殺があるようにしましょう"
+      },
+      "About": {
+        "paragraph": "プリント基板 プロトタイプおよび製作の分野の十年より多くによって、私達は質、配達、費用効果および他のどのデマンドが高い要求の点では異なった企業からの私達の顧客の必要性を満たすことに努力しています。 中国の最もベテラン プリント基板 の製造業者の1つとして、私達はあなたのPCBの必要性のあらゆる面のあなたの最もよい共同経営者、またよい友人であるた",
+        "Why": [
+          "高い熟練したチーム",                                                        
+          "カスタマイズされた設計",
+          "高い配達率",                                                                                      
+          "メンテナンスフリー"
+        ],
+        
+          "Why2": [
+          ]
+        },
+        "Services": [
+          {
+            "icon": "fa fa-wordpress",
+            "name": "Lorem ipsum dolor",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+          },
+          {
+            "icon": "fa fa-cart-arrow-down",
+            "name": "Consectetur adipiscing",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+          },
+          {
+            "icon": "fa fa-cloud-download",
+            "name": "Lorem ipsum dolor",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+          },
+          {
+            "icon": "fa fa-language",
+            "name": "Consectetur adipiscing",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+          },
+          {
+            "icon": "fa fa-plane",
+            "name": "Lorem ipsum dolor",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+          },
+          {
+            "icon": "fa fa-pie-chart",
+            "name": "Consectetur adipiscing",
+            "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam sedasd commodo nibh ante facilisis bibendum dolor feugiat at."
+          }
+        ],
+        "Testimonials": [
+          {
+            "img": "img/testimonials/01.jpg",
+            "text": "That's rough buddy",
+             "name": "Captain America"
+          },
+          {
+            "img": "img/testimonials/02.jpg",
+            "text": "I am Batman",
+             "name": "Batman"
+          },
+          {
+            "img": "img/testimonials/03.jpg",
+            "text": "I am ironman",
+            "name": "Iron man"
+          },
+          {
+            "img": "img/testimonials/04.jpg",
+            "text": " Jokes on u",
+            "name": "Joker"
+          },
+          {
+            "img": "img/testimonials/05.jpg",
+            "text": "Perfectly Balanced, As everything should be",
+           "name": "Thanos"
+          },
+          {
+            "img": "img/testimonials/06.jpg",
+            "text": "Velaku pidichu vinveli porom",
+            "name": "Green Lantern"
+          }
+        ],
+        "Team": [
+          {
+            "img": "img/team/01.jpg",
+            "name": "ナレン・クマール",
+            "job": "Director"
+          },
+          {
+            "img": "img/team/02.jpg",
+            "name": "シュラヴァン",
+            "job": "Chief Operation Officer"
+          },
+          {
+            "img": "img/team/03.jpg",
+            "name": "スリニバス",
+            "job": "Chief Executive Officer"
+          },
+          {
+            "img": "img/team/04.jpg",
+            "name": "コウシク",
+            "job": "Project Manager"
+          }
+        ],
+        "Contact": {
+          "address": "ドア番号6、プロット番号：27、新しい ,2 チェンナイ, アダンバッカム, チェンナイ - 600088 ",
+          "phone": "+91-9791028585",
+          "email": "サーキットベンダー02@gmail.コムコム",
+          "facebook": "fb.com",
+          "twitter": "ツイッター.com",
+          "youtube": "ユーチューブ.com"
+        },
+        "Features": [
+          {
+            "icon": "fa fa-comments-o",
+            "title": "Lorem ipsum",
+            "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+          },
+          {
+            "icon": "fa fa-bullhorn",
+            "title": "Lorem ipsum",
+            "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+          },
+          {
+            "icon": "fa fa-group",
+            "title": "Lorem ipsum",
+            "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+          },
+          {
+            "icon": "fa fa-magic",
+            "title": "Lorem ipsum",
+            "text": "Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam."
+          }
+        ]
+      }
+    }
+  

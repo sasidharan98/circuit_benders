@@ -1,30 +1,41 @@
-import React from 'react'
+import React, {useState} from 'react'
 import { Navbar,Nav,NavDropdown,Form,FormControl } from 'react-bootstrap'
 import ConvoBot from './ConvoBot';
-
-
-class BootstrapNavbar extends React.Component{
-
-    render(){
-        return(
-            <div>
-                <div className="row">
+import i18n from '../i18n';
+import {  useTranslation } from 'react-i18next'
+function Navigation() {
+    const [value, setValue] = useState({value:"jap"})
+    const {t, i18n} = useTranslation();
+    const handleChange = (event) => {
+        console.log("selected val is ", event.target);
+        console.log("selected val is ", event.target.href);
+        console.log("selected val is ", event.target.name);
+        let newlang = event.target.name;
+        setValue(() => ({ value: newlang }));
+        console.log("state value is", newlang);
+        i18n.changeLanguage(newlang);
+      };
+    return (
+        <div>
+            <div className="row">
                     <div className="col" >
                             <Navbar  bg="dark" variant="dark" expand="lg" sticky="top">
                                 <Navbar.Brand href="/">Circuit Benders</Navbar.Brand>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav"  className="justify-content-end">
                                     <Nav className="mr-auto">
-                                    <Nav.Link href="/login">Home</Nav.Link>
-                                    <Nav.Link href="/">About Us</Nav.Link>
-                                    <Nav.Link href="/update-profile">Profile</Nav.Link>
-                                    <NavDropdown title="Product" id="basic-nav-dropdown">
-                                        <NavDropdown.Item href="/product">Raspberry pi</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.2">Arduino</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.3">IOT Boards</NavDropdown.Item>
+                                    <Nav.Link href="/login">{t('Home')}</Nav.Link>
+                                    <Nav.Link href="/">{t('About Us')}</Nav.Link>
+                                    <Nav.Link href="/update-profile">{t('Profile')}</Nav.Link>
+                                    <Nav.Link href="/product">{t('Donate')}</Nav.Link>
+                                    {/* <Nav.Link href="/translate">{t('Translate')}</Nav.Link> */}
+                                    <NavDropdown title={t('Language')} id="basic-nav-dropdown">
+                                        <NavDropdown.Item onClick={handleChange} href = '/' name="en">{t('English')}</NavDropdown.Item>
+                                        <NavDropdown.Item onClick={handleChange}  href = '/' name="jap">{t('Japanese')}</NavDropdown.Item>
+                                        {/* <NavDropdown.Item href="#action/3.3">IOT Boards</NavDropdown.Item>
                                         <NavDropdown.Divider />
                                         <NavDropdown.Item href="#action/3.4">ESP 8266</NavDropdown.Item>
-                                        <NavDropdown.Item href="#action/3.4">Nodemcu</NavDropdown.Item>
+                                        <NavDropdown.Item href="#action/3.4">Nodemcu</NavDropdown.Item> */}
                                     </NavDropdown>
                                     </Nav>
                                     <Form inline>
@@ -38,9 +49,9 @@ class BootstrapNavbar extends React.Component{
                 <div style={{ display: 'flex', zIndex: 1, justifyContent: 'center',position: 'fixed', bottom: '30px', right: '30px' }}>
                 <ConvoBot/>
                 </div>
-            </div>
-        )  
-    }
+        </div>
+    )
 }
 
-export default BootstrapNavbar
+export default Navigation
+
