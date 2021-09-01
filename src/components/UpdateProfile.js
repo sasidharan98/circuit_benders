@@ -2,8 +2,9 @@ import React, { useRef, useState } from "react"
 import { Form, Button, Card, Alert, Container } from "react-bootstrap"
 import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
-
+import {  useTranslation } from 'react-i18next'
 export default function UpdateProfile() {
+  const {t} = useTranslation();
   const emailRef = useRef()
   const passwordRef = useRef()
   const passwordConfirmRef = useRef()
@@ -50,7 +51,7 @@ export default function UpdateProfile() {
       <div className="w-100" style={{ maxWidth: "400px" }}>
       <Card>
         <Card.Body>
-          <h2 className="text-center mb-4">Update Profile</h2>
+          <h2 className="text-center mb-4">{t('Update Profile')}</h2>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">

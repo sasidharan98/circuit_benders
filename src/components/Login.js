@@ -34,7 +34,7 @@ export default function Login() {
       <div className="brand-intro">
       <div className="w-100" style={{ maxWidth: "400px" }}>
       <Card style={{ "padding" : "40px" }}>
-         
+         <h3>{t('Login to get full access')}</h3>
           {error && <Alert variant="danger">{error}</Alert>}
           <Form onSubmit={handleSubmit}>
             <Form.Group id="email">

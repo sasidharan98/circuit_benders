@@ -6,12 +6,7 @@ export const About = (props) => {
   return (
 
     <div id="about">
-          {props.data1}
-          {console.log(props)}
-          {console.log("ok about")}
-          {console.log(props.About)}
-          {console.log(props.data)}
-          {console.log("ok about finished")}
+
       <div className="container">
         <div className="row text-center">
           <div className="col">

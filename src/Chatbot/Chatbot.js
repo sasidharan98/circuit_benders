@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
 import { saveMessage } from '../_actions/message_actions';
@@ -8,7 +8,13 @@ import Card from "./Sections/Card";
 function Chatbot() {
     const dispatch = useDispatch();
     const messagesFromRedux = useSelector(state => state.message.messages)
+    const messagesEndRef = useRef(null)
+    
+    const scrollToBottom = () => {
+        messagesEndRef.current.scrollIntoView({ behavior: "smooth" })
+    }
 
+ 
     useEffect(() => {
 
         eventQuery('welcomeToMyWebsite')
@@ -168,20 +174,24 @@ function Chatbot() {
             return null;
         }
     }
-
+    useEffect(() => {
+        scrollToBottom()
+    }, [renderMessage]);
 
     return (
         <div  className="chatbot_box">
             <div className="chatbot_inter" >
                 {renderMessage(messagesFromRedux)}
+                <div ref={messagesEndRef} />
             </div>
+          
             <input className="message"
                 
                 placeholder="Send a message..."
                 onKeyPress={keyPressHanlder}
                 type="text"
             />
-
+            
         </div>
     )
 }

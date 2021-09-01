@@ -28,9 +28,7 @@ function App() {
     setLandingPageData(d);
   }, []);
   // t('JsonData', { returnObjects: true})
-  console.log("ok")
-  console.log(landingPageData)
-  console.log("ok finished")
+
   const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
   const theme = {
     background: '#f5f8fb',
@@ -48,18 +46,18 @@ function App() {
   return (
 
       <div>
-        <ThemeProvider theme={theme}>
+         
           <Provider
     store={createStoreWithMiddleware(
       Reducer,
       window.__REDUX_DEVTOOLS_EXTENSION__ &&
       window.__REDUX_DEVTOOLS_EXTENSION__()
     )}
-  >
+  ><AuthProvider>
         <BootstrapNavbar />
-        </Provider>
+        
         <Router>
-          <AuthProvider>
+        
             <Switch>     
                <PrivateRoute exact path="/" component={About} data= {landingPageData} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
@@ -70,9 +68,10 @@ function App() {
               <Route path="/forgot-password" component={ForgotPassword} />
               <Route exact path="/status/:orderId" component={PaymentStatus} />
             </Switch>
-          </AuthProvider>
+        
         </Router>
-        </ThemeProvider>
+        </AuthProvider>
+        </Provider>
       </div>
 
   )

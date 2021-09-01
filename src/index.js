@@ -6,7 +6,7 @@ import "./index.css"
 import { I18nextProvider } from "react-i18next";
 
 import i18n from "./i18n";
-import Translatedpage from "./components/translatedpage"
+
 ReactDOM.render(
   <React.StrictMode>
     <Suspense fallback = {<div style={{'textAlign' : 'center'}}> Loading... </div>}>

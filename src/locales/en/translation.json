@@ -1,7 +1,10 @@
 {
   "Home" : "Home",
   "About Us": "About Us",
+  "Update Profile":"Update Profile",
+  "Login to get full access": "Login to get full access",
   "Profile": "Profile",
+  "Logout":"Logout",
   "Donate": "Donate",
   "Translate": "Translate",
   "Language":"Language",

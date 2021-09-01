@@ -1,11 +1,19 @@
 import React, {useState} from 'react'
 import { Navbar,Nav,NavDropdown,Form,FormControl } from 'react-bootstrap'
 import ConvoBot from './ConvoBot';
+import { AuthProvider } from "../contexts/AuthContext"
+import { useAuth } from "../contexts/AuthContext"
 import i18n from '../i18n';
 import {  useTranslation } from 'react-i18next'
 function Navigation() {
     const [value, setValue] = useState({value:"jap"})
+    const { logout } = useAuth()
     const {t, i18n} = useTranslation();
+    const  {currentUser}  = useAuth()
+    const signout = ()=> {
+        logout()
+    }
+    console.log(currentUser)
     const handleChange = (event) => {
         console.log("selected val is ", event.target);
         console.log("selected val is ", event.target.href);
@@ -19,15 +27,16 @@ function Navigation() {
         <div>
             <div className="row">
                     <div className="col" >
+
                             <Navbar  bg="dark" variant="dark" expand="lg" sticky="top">
                                 <Navbar.Brand href="/">Circuit Benders</Navbar.Brand>
                                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                                 <Navbar.Collapse id="basic-navbar-nav"  className="justify-content-end">
                                     <Nav className="mr-auto">
-                                    <Nav.Link href="/login">{t('Home')}</Nav.Link>
-                                    <Nav.Link href="/">{t('About Us')}</Nav.Link>
-                                    <Nav.Link href="/update-profile">{t('Profile')}</Nav.Link>
-                                    <Nav.Link href="/product">{t('Donate')}</Nav.Link>
+                                    <Nav.Link href="/login" onClick={signout}>{currentUser ? t('Logout') : t('Home')}</Nav.Link>
+                                    <Nav.Link href="/" style = {{pointerEvents: currentUser ? 'auto' : 'none'}}>{t('About Us')}</Nav.Link>
+                                    <Nav.Link href="/update-profile" style = {{pointerEvents: currentUser ? 'auto' : 'none'}}>{t('Profile')}</Nav.Link>
+                                    <Nav.Link href="/product" style = {{pointerEvents: currentUser ? 'auto' : 'none'}}>{t('Donate')}</Nav.Link>
                                     {/* <Nav.Link href="/translate">{t('Translate')}</Nav.Link> */}
                                     <NavDropdown title={t('Language')} id="basic-nav-dropdown">
                                         <NavDropdown.Item onClick={handleChange} href = '/' name="en">{t('English')}</NavDropdown.Item>
