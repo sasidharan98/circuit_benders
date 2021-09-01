@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react"
 import Signup from "./Signup"
 import JsonData from "../data/data.json";
 import { AuthProvider } from "../contexts/AuthContext"
+import ReactGA from 'react-ga'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import Reducer from '../_reducers';
 import { Provider } from 'react-redux';
@@ -26,9 +27,10 @@ function App() {
   const d = t('JsonData', { returnObjects: true})
   useEffect(() => {
     setLandingPageData(d);
+    ReactGA.pageview(window.location.pathname);
   }, []);
   // t('JsonData', { returnObjects: true})
-
+ReactGA.initialize('UA-181567210-2')
   const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
   const theme = {
     background: '#f5f8fb',
