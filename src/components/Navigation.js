@@ -13,8 +13,9 @@ function Navigation() {
         currentUser = null
     }
     const handleChange = (event) => {
-        setValue(() => ({ value: event.target.name }));
-        i18n.changeLanguage(value);
+
+        setValue(() => ({ value: event.target.name}));
+        i18n.changeLanguage( event.target.name);
       };
     return (
         <div>
