@@ -44,7 +44,7 @@ const Product = () => {
   const getData=(data)=>
   {
 
-    return fetch(`https://f823-183-82-24-29.ngrok.io/api/payment`,{
+    return fetch(`https://bfe2-183-82-24-29.ngrok.io/api/payment`,{
         method:"POST",
         headers:{
             Accept:"application/json",
