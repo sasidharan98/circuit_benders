@@ -4,9 +4,9 @@ import "./ConvoBot.css"
 
 const ConvoBot = () => { 
   const [clicked, setClicked] = useState(false)
-  const [imgpath, setImgPath] = useState("./img/chatbot.png")
+  const [imgpath, setImgPath] = useState("https://i.ibb.co/Kypdcb9/chatbot.png")
   const handleClick = () => {
-    setImgPath((clicked)? "./img/chatbot.png" : "./img/close.png")
+    setImgPath((clicked)? "https://i.ibb.co/Kypdcb9/chatbot.png" : "https://i.ibb.co/9nhW2gh/button-close-icon-645944.png")
     setClicked((clicked)? false : true)
 
   }
@@ -16,8 +16,11 @@ const ConvoBot = () => {
         <h1></h1>
       </div> */}
       <div style={{ display: 'flex', justifyContent: 'center',position: 'absolute', bottom: '30px', right: '30px' }}>
+{/* 
+      <i className =  {(clicked)? 'fa fa-close' : "fa fa-user"} style = {{  Width: '50px', Height: '50px' , fontSize:  '26px'}}onClick={handleClick}></i>
+      <i className={(clicked)? '' : "fa fa-comment"}></i> */}
+       <img  className="botimg" style = {{  Width: '50px', Height: '50px', maxWidth: '50px',maxHeight: '50px'}}src={imgpath} alt="chat bot" onClick={handleClick} />
 
-      <img  className="botimg" style = {{  Width: '50px', Height: '50px', maxWidth: '50px',maxHeight: '50px'}}src={imgpath} alt="chat bot" onClick={handleClick} />
 {clicked ? <Chatbot /> : null}
       </div>
     </div>

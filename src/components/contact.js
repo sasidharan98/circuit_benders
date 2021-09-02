@@ -151,7 +151,7 @@ export const Contact = (props) => {
                   </li>
                   <li>
                     <a href={props.data ? props.data.twitter : '/'}>
-                      <i className='fa fa-instagram'></i>
+                      <i className='fa fa-twitter'></i>
                     </a>
                   </li>
                   <li>
@@ -160,8 +160,8 @@ export const Contact = (props) => {
                     </a>
                   </li>
                   <li>
-                    <a href={props.data ? props.data.youtube : '/'}>
-                      <i className='fa fa-twitter'></i>
+                    <a href={props.data ? props.data.instagram : '/'}>
+                      <i className='fa fa-instagram'></i>
                     </a>
                   </li>
                 </ul>
