@@ -2,7 +2,7 @@ import React from 'react'
 import {  Trans,useTranslation } from 'react-i18next'
 
 const Translatedpage = () => {
-    const {t, i18n} = useTranslation();
+    const {t} = useTranslation();
     const k = t('JsonData', { returnObjects: true})
     return (
         <div>

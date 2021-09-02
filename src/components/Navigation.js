@@ -1,28 +1,20 @@
 import React, {useState} from 'react'
 import { Navbar,Nav,NavDropdown,Form,FormControl } from 'react-bootstrap'
 import ConvoBot from './ConvoBot';
-import { AuthProvider } from "../contexts/AuthContext"
 import { useAuth } from "../contexts/AuthContext"
-import i18n from '../i18n';
 import {  useTranslation } from 'react-i18next'
 function Navigation() {
     const [value, setValue] = useState({value:"jap"})
     const { logout } = useAuth()
     const {t, i18n} = useTranslation();
-    const  {currentUser}  = useAuth()
+    let  {currentUser}  = useAuth()
     const signout = ()=> {
         logout()
         currentUser = null
     }
-    console.log(currentUser)
     const handleChange = (event) => {
-        console.log("selected val is ", event.target);
-        console.log("selected val is ", event.target.href);
-        console.log("selected val is ", event.target.name);
-        let newlang = event.target.name;
-        setValue(() => ({ value: newlang }));
-        console.log("state value is", newlang);
-        i18n.changeLanguage(newlang);
+        setValue(() => ({ value: event.target.name }));
+        i18n.changeLanguage(value);
       };
     return (
         <div>

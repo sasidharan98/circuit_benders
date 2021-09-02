@@ -49,7 +49,7 @@ export default function Login() {
               {t('login')}
             </Button>
           </Form>
-          <div className="w-100 text-center mt-3">
+          <div className="w-100 text-center mt-3 signup">
             <Link to="/forgot-password">{t('Forgot Password?')}</Link>
           </div>
           </Card>

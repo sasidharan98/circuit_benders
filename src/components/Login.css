@@ -201,7 +201,9 @@
         width: 100%;
         border: none;
       }
-    
+    .signup{
+      margin-top: 10px;
+    }
       @media screen and (max-width: 1100px) {
         .form-css{
             display: flex;

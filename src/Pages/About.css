@@ -53,6 +53,9 @@
     .caption{
       margin-bottom: 10px;
     }
+    .caption p {
+      margin-top: 0px;
+    }
   
   }
 

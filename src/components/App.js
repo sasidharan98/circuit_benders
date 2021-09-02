@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react"
 import Signup from "./Signup"
-import JsonData from "../data/data.json";
+// import JsonData from "../data/data.json";
 import { AuthProvider } from "../contexts/AuthContext"
 import ReactGA from 'react-ga'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
@@ -17,12 +17,11 @@ import { About } from "../Pages/About";
 import BootstrapNavbar from "./Navigation";
 import PaymentStatus from "./PaymentStatus";
 import Product from "./product";
-import { Trans, translate, useTranslation } from 'react-i18next'
-import { ThemeProvider } from 'styled-components';
+import {  useTranslation } from 'react-i18next'
 import Translatedpage from './translatedpage';
-import { render } from "@testing-library/react";
+
 function App() {
-  const {t, i18n} = useTranslation();
+  const {t} = useTranslation();
   const [landingPageData, setLandingPageData] = useState({});
   const d = t('JsonData', { returnObjects: true})
   useEffect(() => {
@@ -32,17 +31,17 @@ function App() {
   // t('JsonData', { returnObjects: true})
 ReactGA.initialize('UA-181567210-2')
   const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
-  const theme = {
-    background: '#f5f8fb',
-    fontFamily: 'Helvetica Neue',
-    headerBgColor: '#EF6C00',
-    headerFontColor: '#fff',
-    headerFontSize: '15px',
-    botBubbleColor: '#EF6C00',
-    botFontColor: '#fff',
-    userBubbleColor: '#fff',
-    userFontColor: '#4a4a4a',
-  };
+  // const theme = {
+  //   background: '#f5f8fb',
+  //   fontFamily: 'Helvetica Neue',
+  //   headerBgColor: '#EF6C00',
+  //   headerFontColor: '#fff',
+  //   headerFontSize: '15px',
+  //   botBubbleColor: '#EF6C00',
+  //   botFontColor: '#fff',
+  //   userBubbleColor: '#fff',
+  //   userFontColor: '#4a4a4a',
+  // };
 
   if (landingPageData!== undefined){
   return (

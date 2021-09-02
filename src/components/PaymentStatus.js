@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { db } from '../firebase'
-import { collection, query, where, getDocs } from "firebase/firestore";
 const PaymentStatus = ({match}) => {
 const[values,setValues]=useState({
     success:false,
@@ -14,9 +13,9 @@ const{success,error}=values
 const  getStatus = () => {
  
     db.collection('payments').doc('xvJnHNyJDxX2LBhdtbPD').get().then(value=>{
-        console.log(value.data())
-        console.log(match.params.ORDERID)
-        console.log(match.params.ORDERID)
+        // console.log(value.data())
+        // console.log(match.params.ORDERID)
+        // console.log(match.params.ORDERID)
         if(value)
         {
             value.data().paymentHistory.map((data)=>{
@@ -24,13 +23,13 @@ const  getStatus = () => {
                 {
                     if(data.STATUS==='TXN_SUCCESS')
                     {
-                        setValues({...values,success:true,error:false})
+                        return setValues({...values,success:true,error:false})
                     }
                     
                 }
                 else
                 {
-                    setValues({...values,success:false,error:"Payment Failed"})
+                    return setValues({...values,success:false,error:"Payment Failed"})
                 }
             })
         }
