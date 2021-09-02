@@ -7,15 +7,19 @@ function Navigation() {
     const [value, setValue] = useState({value:"jap"})
     const { logout } = useAuth()
     const {t, i18n} = useTranslation();
-    let  {currentUser}  = useAuth()
+    const  {currentUser}  = useAuth()
     const signout = ()=> {
         logout()
         currentUser = null
     }
     const handleChange = (event) => {
-        let langName = event.target.name;
-        setValue(() => ({ value: langName }));
-        i18n.changeLanguage(langName);
+        console.log("selected val is ", event.target);
+        console.log("selected val is ", event.target.href);
+        console.log("selected val is ", event.target.name);
+        let newlang = event.target.name;
+        setValue(() => ({ value: event.target.name }));
+        console.log("state value is", newlang);
+        i18n.changeLanguage(newlang);
       };
     return (
         <div>
