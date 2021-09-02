@@ -34,8 +34,9 @@ function Navigation() {
                                     <Nav.Link href="/login" onClick={signout}>{currentUser ? t('Logout') : t('Home')}</Nav.Link>
                                     <Nav.Link href="/" style = {{pointerEvents: currentUser ? 'auto' : 'none'}}>{t('About Us')}</Nav.Link>
                                     <Nav.Link href="/update-profile" style = {{pointerEvents: currentUser ? 'auto' : 'none'}}>{t('Profile')}</Nav.Link>
-                                    <Nav.Link href="/product" style = {{pointerEvents: currentUser ? 'auto' : 'none'}}>{t('Donate')}</Nav.Link>
-                                    {/* <Nav.Link href="/translate">{t('Translate')}</Nav.Link> */}
+                                    <Nav.Link href="/donate" style = {{pointerEvents: currentUser ? 'auto' : 'none'}}>{t('Donate')}</Nav.Link>
+                                    <Nav.Link href="/product">{t('Product')}</Nav.Link>
+                                    <Nav.Link href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span className="cartlogo_badge">0</span></Nav.Link>
                                     <NavDropdown title={t('Language')} id="basic-nav-dropdown">
                                         <NavDropdown.Item onClick={handleChange} href = '/' name="en">{t('English')}</NavDropdown.Item>
                                         <NavDropdown.Item onClick={handleChange}  href = '/' name="jap">{t('Japanese')}</NavDropdown.Item>

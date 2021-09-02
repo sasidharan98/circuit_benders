@@ -16,9 +16,12 @@ import UpdateProfile from "./UpdateProfile"
 import { About } from "../Pages/About";
 import BootstrapNavbar from "./Navigation";
 import PaymentStatus from "./PaymentStatus";
-import Product from "./product";
+import Donate from "./donate";
 import {  useTranslation } from 'react-i18next'
 import Translatedpage from './translatedpage';
+import Product from "./Product"
+import Cart from './Cart';
+import DetailedProduct from './DetailedProduct';
 
 function App() {
   const {t} = useTranslation();
@@ -48,13 +51,8 @@ ReactGA.initialize('UA-181567210-2')
 
       <div>
          
-          <Provider
-    store={createStoreWithMiddleware(
-      Reducer,
-      window.__REDUX_DEVTOOLS_EXTENSION__ &&
-      window.__REDUX_DEVTOOLS_EXTENSION__()
-    )}
-  ><AuthProvider>
+          <Provider store={createStoreWithMiddleware(Reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())}>
+            <AuthProvider>
         <BootstrapNavbar />
         
         <Router>
@@ -64,7 +62,10 @@ ReactGA.initialize('UA-181567210-2')
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />  
-              <Route path="/product" component={Product} />
+              <Route path="/donate" component={Donate} />
+              <Route path="/product/:id" component={DetailedProduct} />
+              <Route path="/product/" component={Product} />
+              <Route path="/cart" component={Cart} />
               <Route path="/translate" component={Translatedpage} />
               <Route path="/forgot-password" component={ForgotPassword} />
               <Route exact path="/status/:orderId" component={PaymentStatus} />

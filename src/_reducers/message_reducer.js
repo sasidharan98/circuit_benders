@@ -1,6 +1,6 @@
 import {
     SAVE_MESSAGE,
-} from '../_actions/types';
+} from '../constants/messageConstants';
 
 export default function (state = {messages:[]}, action) {
     switch (action.type) {

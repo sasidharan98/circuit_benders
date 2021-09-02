@@ -1,0 +1,26 @@
+.homescreen {
+    max-width: 1300px;
+    margin: 1rem auto;
+  }
+.homescreen_products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  @media (max-width: 1232px) {
+    .homescreen_products {
+      grid-template-columns: repeat(3, auto);
+    }
+  }
+  
+  @media (max-width: 950px) {
+    .homescreen_products {
+      grid-template-columns: repeat(2, auto);
+    }
+  }
+  
+  @media (max-width: 630px) {
+    .homescreen_products{
+      grid-template-columns: 1fr;
+    }
+  }

@@ -1,6 +1,6 @@
 import {
     SAVE_MESSAGE,
-} from './types';
+} from '../constants/messageConstants';
 
 export function saveMessage(dataToSubmit) {
    
