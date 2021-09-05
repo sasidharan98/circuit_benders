@@ -4,7 +4,7 @@ import Signup from "./Signup"
 import { AuthProvider } from "../contexts/AuthContext"
 import ReactGA from 'react-ga'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import Reducer from '../_reducers';
+import Reducer from '../redux/reducers';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import promiseMiddleware from 'redux-promise';
@@ -31,32 +31,27 @@ function App() {
     setLandingPageData(d);
     ReactGA.pageview(window.location.pathname);
   }, []);
-  // t('JsonData', { returnObjects: true})
+ 
+const cartItemsInLocalStorage = localStorage.getItem("cart") ? JSON.parse(localStorage.getItem("cart")) : [];
+
+const INITIAL_STATE = {
+cart: {
+  cartItems: cartItemsInLocalStorage,
+},
+}
 ReactGA.initialize('UA-181567210-2')
   const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
-  // const theme = {
-  //   background: '#f5f8fb',
-  //   fontFamily: 'Helvetica Neue',
-  //   headerBgColor: '#EF6C00',
-  //   headerFontColor: '#fff',
-  //   headerFontSize: '15px',
-  //   botBubbleColor: '#EF6C00',
-  //   botFontColor: '#fff',
-  //   userBubbleColor: '#fff',
-  //   userFontColor: '#4a4a4a',
-  // };
 
   if (landingPageData!== undefined){
   return (
 
       <div>
          
-          <Provider store={createStoreWithMiddleware(Reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())}>
+          <Provider store={createStoreWithMiddleware(Reducer,INITIAL_STATE, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())}>
             <AuthProvider>
         <BootstrapNavbar />
-        
         <Router>
-        
+
             <Switch>     
                <PrivateRoute exact path="/" component={About} data= {landingPageData} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
@@ -64,7 +59,7 @@ ReactGA.initialize('UA-181567210-2')
               <Route path="/login" component={Login} />  
               <Route path="/donate" component={Donate} />
               <Route path="/product/:id" component={DetailedProduct} />
-              <Route path="/product/" component={Product} />
+              <Route path="/product" component={Product} />
               <Route path="/cart" component={Cart} />
               <Route path="/translate" component={Translatedpage} />
               <Route path="/forgot-password" component={ForgotPassword} />

@@ -4,6 +4,8 @@ import { useAuth } from "../contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import {  useTranslation } from 'react-i18next'
 import './Login.css'
+import ReCAPTCHA from "react-google-recaptcha"
+import { func } from "prop-types"
 export default function Login() {
   const emailRef = useRef()
   const passwordRef = useRef()
@@ -12,6 +14,8 @@ export default function Login() {
   const [loading, setLoading] = useState(false)
   const history = useHistory()
   const {t} = useTranslation();
+  const [verify, setVerify] = useState(false)
+  console.log(verify)
   async function handleSubmit(e) {
     e.preventDefault()
 
@@ -26,7 +30,26 @@ export default function Login() {
 
     setLoading(false)
   }
-
+async function onChangeRecaptcha(value){
+  console.log("Captcha value", value)
+  if(value){
+    const response = await fetch("http://localhost:5001/api/auth", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        captcha: value
+      })
+    }).then(setVerify(true))
+    .catch(setVerify(false))
+  
+  console.log(verify)
+  }
+  else{
+    setVerify(false)
+  }
+}
   return (
     <>
    <marquee><h1>{t('marq')}</h1></marquee>
@@ -45,7 +68,8 @@ export default function Login() {
               <Form.Label>Password</Form.Label>
               <Form.Control type="password" ref={passwordRef} required />
             </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
+            <ReCAPTCHA sitekey="6LcUw0McAAAAAFGex7s_92JjF5qHqUhwk5YF7NO3"onChange={onChangeRecaptcha} />
+            <Button  disabled ={!(verify)} className="w-100" type="submit">
               {t('login')}
             </Button>
           </Form>

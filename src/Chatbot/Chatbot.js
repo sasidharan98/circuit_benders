@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import Axios from 'axios';
 import { useDispatch, useSelector } from 'react-redux';
-import { saveMessage } from '../_actions/message_actions';
+import { saveMessage } from '../redux/actions/message_actions';
 import Message from './Sections/Message';
 import { List, Icon, Avatar } from 'antd';
 import Card from "./Sections/Card";
@@ -43,7 +43,7 @@ function Chatbot() {
         }
         try {
             //I will send request to the textQuery ROUTE 
-            const response = await Axios.post('https://bfe2-183-82-24-29.ngrok.io/api/dialogflow/textQuery', textQueryVariables)
+            const response = await Axios.post('http://localhost:5001/api/dialogflow/textQuery', textQueryVariables)
 
             for (let content of response.data.fulfillmentMessages) {
 
@@ -82,7 +82,7 @@ function Chatbot() {
         }
         try {
             //I will send request to the textQuery ROUTE 
-            const response = await Axios.post('https://bfe2-183-82-24-29.ngrok.io/api/dialogflow/eventQuery', eventQueryVariables)
+            const response = await Axios.post('http://localhost:5001/api/dialogflow/eventQuery', eventQueryVariables)
             for (let content of response.data.fulfillmentMessages) {
 
                 let conversation = {

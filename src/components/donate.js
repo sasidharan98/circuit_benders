@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Donate = () => {
+const Donate = (props) => {
   function isDate(val) {
     // Cross realm comptatible
     return Object.prototype.toString.call(val) === '[object Date]'
@@ -44,7 +44,7 @@ const Donate = () => {
   const getData=(data)=>
   {
 
-    return fetch(`https://bfe2-183-82-24-29.ngrok.io/api/payment`,{
+    return fetch(`http://localhost:5001/api/payment`,{
         method:"POST",
         headers:{
             Accept:"application/json",
@@ -58,7 +58,10 @@ const Donate = () => {
 
     const makePayment=()=>
     {
-getData({amount:100,email:'shravan97c@gmail.com'}).then(response=>{
+      const d = props.data()
+      const k = parseFloat(d).toFixed(2)
+      console.log(parseFloat(d).toFixed(2))
+getData({amount: Number(k) ,email:'shravan97c@gmail.com'}).then(response=>{
  
     var information={
         action:"https://securegw-stage.paytm.in/order/process",
@@ -70,6 +73,7 @@ getData({amount:100,email:'shravan97c@gmail.com'}).then(response=>{
     }
     return (
         <div style={{display:'flex', justifyContent: 'center', alignItems:'center'}}>
+          {console.log(props)}
             <button  onClick={makePayment}>PAY USING PAYTM</button>
         </div>
     )

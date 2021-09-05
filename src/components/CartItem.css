@@ -31,7 +31,7 @@
   
   .cartItem__deleteBtn {
     padding: 10px 17px;
-    color: red;
+    color: rgb(180, 7, 7);
     background: #f4f4f4;
     border: 1px solid #171717;
     cursor: pointer;
@@ -41,8 +41,9 @@
   .cartItem__deleteBtn:hover,
   .carItem__deleteBtn:active,
   .carItem__deleteBtn:focus {
-    background: #171717;
-    transform: scale(1.2);
+    background: #a7a7a7;
+    color: rgb(184, 13, 13);
+    transform: scale(1.1);
   }
   
   @media (max-width: 700px) {

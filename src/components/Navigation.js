@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Navbar,Nav,NavDropdown,Form,FormControl } from 'react-bootstrap'
 import ConvoBot from './ConvoBot';
 import { useAuth } from "../contexts/AuthContext"
+import { useSelector } from "react-redux";
 import {  useTranslation } from 'react-i18next'
 function Navigation() {
     const [value, setValue] = useState({value:"jap"})
@@ -12,6 +13,15 @@ function Navigation() {
         logout()
         currentUser = null
     }
+    
+
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+
+  const getCartCount = () => {
+    return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
+  };
+
     const handleChange = (event) => {
         console.log("selected val is ", event.target);
         console.log("selected val is ", event.target.href);
@@ -21,6 +31,7 @@ function Navigation() {
         console.log("state value is", newlang);
         i18n.changeLanguage(newlang);
       };
+    
     return (
         <div>
             <div className="row">
@@ -36,7 +47,7 @@ function Navigation() {
                                     <Nav.Link href="/update-profile" style = {{pointerEvents: currentUser ? 'auto' : 'none'}}>{t('Profile')}</Nav.Link>
                                     <Nav.Link href="/donate" style = {{pointerEvents: currentUser ? 'auto' : 'none'}}>{t('Donate')}</Nav.Link>
                                     <Nav.Link href="/product">{t('Product')}</Nav.Link>
-                                    <Nav.Link href="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span className="cartlogo_badge">0</span></Nav.Link>
+                                    <Nav.Link href="/cart"><i className="fa fa-shopping-cart" aria-hidden="true"></i><span className="cartlogo_badge" style={{padding: "10px"}}>{getCartCount()}</span></Nav.Link>
                                     <NavDropdown title={t('Language')} id="basic-nav-dropdown">
                                         <NavDropdown.Item onClick={handleChange} href = '/' name="en">{t('English')}</NavDropdown.Item>
                                         <NavDropdown.Item onClick={handleChange}  href = '/' name="jap">{t('Japanese')}</NavDropdown.Item>

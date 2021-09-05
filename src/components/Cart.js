@@ -1,20 +1,47 @@
 import React from 'react'
 import './Cart.css'
+import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
+import { addToCart, removeFromCart } from "../redux/actions/cartActions";
+import Donate from './donate';
 import CartItem from './CartItem'
 const Cart = () => {
+  const dispatch = useDispatch();
+
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+
+  useEffect(() => {}, []);
+
+  const qtyChangeHandler = (id, qty) => {
+    dispatch(addToCart(id, qty));
+  };
+
+  const removeFromCartHandler = (id) => {
+    dispatch(removeFromCart(id));
+  };
+
+  const getCartCount = () => {
+    return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
+  };
+
+  const getCartSubTotal = () => {
+    return cartItems
+      .reduce((price, item) => price + item.price * item.qty, 0)
+      .toFixed(2);
+  };
     return (
-        <div>
-            <div className="cartscreen">
+      <>
+      <div className="cartscreen">
         <div className="cartscreen__left">
           <h2>Shopping Cart</h2>
 
-          {/* {cartItems.length === 0 ? ( */}
+          {cartItems.length === 0 ? (
             <div>
-              <CartItem />
-              <CartItem />
-              {/* <Link to="/">Go Back</Link> */}
+              Your Cart Is Empty <Link to="/product">Go Back</Link>
             </div>
-          {/* ) : (
+          ) : (
             cartItems.map((item) => (
               <CartItem
                 key={item.product}
@@ -23,20 +50,21 @@ const Cart = () => {
                 removeHandler={removeFromCartHandler}
               />
             ))
-          )} */}
+          )}
         </div>
 
         <div className="cartscreen__right">
           <div className="cartscreen__info">
-            <p>Subtotal 0 items</p>
-            <p>12308</p>
+            <p>Subtotal ({getCartCount()}) items</p>
+            <p>₹{getCartSubTotal()}</p>
           </div>
           <div>
             <button>Proceed To Checkout</button>
+            <Donate data={getCartSubTotal} />
           </div>
         </div>
-        </div>
-        </div>
+      </div>
+    </>
     )
 }
 
