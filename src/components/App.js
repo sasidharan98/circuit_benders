@@ -22,6 +22,8 @@ import Translatedpage from './translatedpage';
 import Product from "./Product"
 import Cart from './Cart';
 import DetailedProduct from './DetailedProduct';
+import Footer from "./Footer"
+import Home from "./Home"
 
 function App() {
   const {t} = useTranslation();
@@ -53,20 +55,23 @@ ReactGA.initialize('UA-181567210-2')
         <Router>
 
             <Switch>     
-               <PrivateRoute exact path="/" component={About} data= {landingPageData} />
+              <Route exact path="/" component={Home} />
+              <PrivateRoute exact path="/about" component={About} data= {landingPageData} />
               <PrivateRoute path="/update-profile" component={UpdateProfile} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />  
               <Route path="/donate" component={Donate} />
-              <Route path="/product/:id" component={DetailedProduct} />
-              <Route path="/product" component={Product} />
-              <Route path="/cart" component={Cart} />
+              <Route path='/home' component={Home} />
+              <PrivateRoute path="/product/:id" component={DetailedProduct} />
+              <PrivateRoute path="/product" component={Product} />
+              <PrivateRoute path="/cart" component={Cart} />
               <Route path="/translate" component={Translatedpage} />
               <Route path="/forgot-password" component={ForgotPassword} />
-              <Route exact path="/status/:orderId" component={PaymentStatus} />
+              <PrivateRoute exact path="/status/:orderId" component={PaymentStatus} />
             </Switch>
         
         </Router>
+        <Footer data={landingPageData.Contact}/>
         </AuthProvider>
         </Provider>
       </div>

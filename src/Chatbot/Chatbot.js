@@ -43,7 +43,7 @@ function Chatbot() {
         }
         try {
             //I will send request to the textQuery ROUTE 
-            const response = await Axios.post('http://localhost:5001/api/dialogflow/textQuery', textQueryVariables)
+            const response = await Axios.post('https://e267-183-82-204-235.ngrok.io/api/dialogflow/textQuery', textQueryVariables)
 
             for (let content of response.data.fulfillmentMessages) {
 
@@ -82,7 +82,7 @@ function Chatbot() {
         }
         try {
             //I will send request to the textQuery ROUTE 
-            const response = await Axios.post('http://localhost:5001/api/dialogflow/eventQuery', eventQueryVariables)
+            const response = await Axios.post('https://e267-183-82-204-235.ngrok.io/api/dialogflow/eventQuery', eventQueryVariables)
             for (let content of response.data.fulfillmentMessages) {
 
                 let conversation = {

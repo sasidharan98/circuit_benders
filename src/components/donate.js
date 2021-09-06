@@ -74,7 +74,7 @@ getData({amount: Number(k) ,email:'shravan97c@gmail.com'}).then(response=>{
     return (
         <div style={{display:'flex', justifyContent: 'center', alignItems:'center'}}>
           {console.log(props)}
-            <button  onClick={makePayment}>PAY USING PAYTM</button>
+            <button  onClick={makePayment}>Proceed to Checkout</button>
         </div>
     )
 }

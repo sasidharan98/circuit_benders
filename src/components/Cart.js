@@ -10,7 +10,7 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   const cart = useSelector((state) => state.cart);
-  const { cartItems } = cart;
+  const { cartItems } = cart; 
 
   useEffect(() => {}, []);
 
@@ -59,7 +59,6 @@ const Cart = () => {
             <p>₹{getCartSubTotal()}</p>
           </div>
           <div>
-            <button>Proceed To Checkout</button>
             <Donate data={getCartSubTotal} />
           </div>
         </div>

@@ -2,7 +2,7 @@ import * as actionTypes from "../constants/cartConstants";
 import axios from "axios";
 
 export const addToCart = (id, qty) => async (dispatch, getState) => {
-  const { data } = await axios.get(`http://localhost:5001/api/products/${id}`);
+  const { data } = await axios.get(`https://e267-183-82-204-235.ngrok.io/api/products/${id}`);
   
   dispatch({
     type: actionTypes.ADD_TO_CART,

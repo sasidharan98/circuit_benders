@@ -19,7 +19,7 @@ const ConvoBot = () => {
 {/* 
       <i className =  {(clicked)? 'fa fa-close' : "fa fa-user"} style = {{  Width: '50px', Height: '50px' , fontSize:  '26px'}}onClick={handleClick}></i>
       <i className={(clicked)? '' : "fa fa-comment"}></i> */}
-       <img  className="botimg" style = {{  Width: '50px', Height: '50px', maxWidth: '50px',maxHeight: '50px', zIndex :'10'}}src={imgpath} alt="chat bot" onClick={handleClick} />
+       <img  className="botimg" style = {{  Width: '50px', Height: '50px', maxWidth: '50px',maxHeight: '50px', zIndex :'10', filter: 'none'}}src={imgpath} alt="chat bot" onClick={handleClick} />
 
 {clicked ? <Chatbot /> : null}
       </div>

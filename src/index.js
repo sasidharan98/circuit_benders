@@ -4,7 +4,7 @@ import App from "./components/App"
 import "bootstrap/dist/css/bootstrap.min.css"
 import "./index.css"
 import { I18nextProvider } from "react-i18next";
-
+import '../node_modules/font-awesome/css/font-awesome.min.css'; 
 import i18n from "./i18n";
 
 ReactDOM.render(
