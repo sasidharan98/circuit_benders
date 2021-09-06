@@ -36,7 +36,7 @@ function Navigation() {
     return (
         <div>
             <div className="row">
-                    <div className="col" style={{padding: 0, margin: 0, backgroundColor: "rgb(58 58 58)"}}>
+                    <div className="col" style={{padding: 0, margin: 0, backgroundColor : "rgb(59, 58, 58)"}}>
 
                             <Navbar  bg="dark" variant="dark" expand="lg" sticky="top">
                                 <Navbar.Brand href="/">Circuit Benders</Navbar.Brand>
@@ -48,11 +48,11 @@ function Navigation() {
                                     <Nav.Link href="/about">{t('About Us')}</Nav.Link>
                                     <Nav.Link href="/update-profile" >{t('Profile')}</Nav.Link>
                                     {/* <Nav.Link href="/donate" style = {{pointerEvents: currentUser ? 'auto' : 'none'}}>{t('Donate')}</Nav.Link> */}
-                                    <NavDropdown renderMenuOnMount={true} title={t('Product')} id="basic-nav-dropdown" href="/product">
+                                    <NavDropdown title={t('Product')} id="basic-nav-dropdown" href="/product">
                                     <NavDropdown.Item  href = '/product' name="en">{t('Electronics')}</NavDropdown.Item>
                                     </NavDropdown>
                                     <Nav.Link href="/cart"><i className="fa fa-shopping-cart" aria-hidden="true"></i><span className="cartlogo_badge" style={{ padding:(getCartCount() !== 0)? '10px': '0px'  }}>{(getCartCount() !== 0) ? getCartCount() : ''}</span></Nav.Link>
-                                    <NavDropdown renderMenuOnMount={true} title={t('Language')} id="basic-nav-dropdown">
+                                    <NavDropdown title={t('Language')} id="basic-nav-dropdown">
                                         <NavDropdown.Item onClick={handleChange} href = '/' name="en">{t('English')}</NavDropdown.Item>
                                         <NavDropdown.Item onClick={handleChange}  href = '/' name="jap">{t('Japanese')}</NavDropdown.Item>
                                         {/* <NavDropdown.Item href="#action/3.3">IOT Boards</NavDropdown.Item>

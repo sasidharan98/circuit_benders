@@ -1,3 +1,18 @@
-.nav-item.dropdown:hover .dropdown-menu {
-    display: block;
-}
+
+.nav-item .dropdown-menu {
+    background: #303030;
+  }
+  
+  .nav-item .dropdown-item {
+    color: #ffffff;
+  }
+  
+  .nav-item .dropdown-item:hover {
+    background: #1e1e1e;
+    color: #ffffff;
+  }
+  .nav-item .dropdown-item:active{
+    background: transparent;
+    color: #ffffff;
+
+  }
