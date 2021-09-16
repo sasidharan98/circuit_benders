@@ -6,7 +6,7 @@ export const getProducts = () => async (dispatch) => {
   try {
     dispatch({ type: actionTypes.GET_PRODUCTS_REQUEST });
 
-    const { data } = await axios.get("https://e267-183-82-204-235.ngrok.io/api/products/");
+    const { data } = await axios.get("http://localhost:5001/api/products/");
 
     dispatch({
       type: actionTypes.GET_PRODUCTS_SUCCESS,
@@ -22,12 +22,11 @@ export const getProducts = () => async (dispatch) => {
     });
   }
 };
-
 export const getProductDetails = (id) => async (dispatch) => {
   try {
     dispatch({ type: actionTypes.GET_PRODUCT_DETAILS_REQUEST });
 
-    const { data } = await axios.get(`https://e267-183-82-204-235.ngrok.io/api/products/${id}`);
+    const { data } = await axios.get(`http://localhost:5001/api/products/${id}`);
 
     dispatch({
       type: actionTypes.GET_PRODUCT_DETAILS_SUCCESS,
